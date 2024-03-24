@@ -1,0 +1,8 @@
+.Myself{
+    border: solid 2px rgb(207, 176, 120);
+    width:22rem;
+    border-radius:1rem;
+}
+div.Myself h2{
+    color:blue;
+}
