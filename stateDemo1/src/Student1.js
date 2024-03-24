@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Student1 extends Component{
     state = {name:"Deepa", roll:12}
+    
     render(){
         return(
             <div>
