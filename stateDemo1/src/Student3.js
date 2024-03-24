@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Student2 extends Component{
+class Student3 extends Component{
     
-    constructor(){
-        super()
-        this.state = {name:"Deepuu", roll:13};
+    constructor(props){
+        super(props)
+        this.state = {name:this.props.name, roll:this.props.roll};
 
     }
     render(){
@@ -18,4 +18,4 @@ class Student2 extends Component{
     }
 
 }
-export default Student2;
+export default Student3;
