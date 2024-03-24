@@ -5,7 +5,6 @@ class Student2 extends Component{
     constructor(){
         super()
         this.state = {name:"Deepuu", roll:13};
-
     }
     render(){
         return(
