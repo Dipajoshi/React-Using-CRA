@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./MyClicker.css"
 
 class MyClicker extends Component{
     constructor(props){
@@ -16,9 +17,9 @@ class MyClicker extends Component{
 
     render(){
         return(
-            <div>
+            <div className='center'>
                 <h2>Counter is {this.state.num}</h2>
-                {this.state.num === 6 ? <p>You win</p> :  <button onClick={this.getRandom}>  <p>Generate new number</p> </button> }
+                {this.state.num === 6 ? <p> Congratulations!🥳🥳 You Won.</p> : <div> <button onClick={this.getRandom}>  <p>Generate new number</p> </button> <p className="note">Counter should be 6 to win</p></div>}
             </div>
 
         );
