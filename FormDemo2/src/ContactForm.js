@@ -1,0 +1,41 @@
+import React, { Component } from 'react';
+
+class ContactForm extends Component{
+    constructor(props){
+        super(props);
+        this.state={username:"" };
+        this.handleChange=this.handleChange.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this);
+        
+    }
+    handleChange(e){
+        
+        this.setState({username:e.target.value});
+        }
+    handleSubmit(e){
+        e.preventDefault();
+        alert("You typed " + this.state.username);
+        this.setState({username:""})
+        
+    }
+
+    render(){
+       return(
+       <div>
+        <h2>Contact form</h2>
+        <form onSubmit={this.handleSubmit}>
+            <label htmlFor="usrname" >Name</label>
+            <input type="text" id="usrname"
+             value={this.state.username}
+              onChange={this.handleChange}>
+                </input>
+         
+         <input type="submit"></input>
+            
+        </form>
+        
+        </div>
+        ) ;
+    }
+}
+export default ContactForm;
