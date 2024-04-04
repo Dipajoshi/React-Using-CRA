@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ContactForm extends Component{
     constructor(props){
         super(props);
-        this.state={username:"",email:"",pwd:"" , submitted:false };
+        this.state={username:"",email:"",pwd:""  };
         this.handleChange1=this.handleChange1.bind(this);
         this.handleChange2=this.handleChange2.bind(this);
         this.handleChange3=this.handleChange3.bind(this);
@@ -13,20 +13,20 @@ class ContactForm extends Component{
     }
     handleChange1(e){
         
-        this.setState({username:e.target.value, submitted:false});
+        this.setState({username:e.target.value});
         }
     handleChange2(e){
         
-        this.setState({email:e.target.value, submitted:false});
+        this.setState({email:e.target.value});
         }
     handleChange3(e){
         
-        this.setState({pwd:e.target.value, submitted:false});
+        this.setState({pwd:e.target.value});
         }
     handleSubmit(e){
         e.preventDefault();
         alert(`You typed: ${this.state.username} \n ${this.state.email} \n ${this.state.pwd}`)
-        this.setState({username:"", submitted:true})
+        
         
     }
 
