@@ -4,28 +4,17 @@ class ContactForm extends Component{
     constructor(props){
         super(props);
         this.state={username:"",email:"",pwd:""  };
-        this.handleChange1=this.handleChange1.bind(this);
-        this.handleChange2=this.handleChange2.bind(this);
-        this.handleChange3=this.handleChange3.bind(this);
-        this.handleSubmit=this.handleSubmit.bind(this);
-        this.value="";
-        
+        this.handleChange=this.handleChange.bind(this);
+                
     }
-    handleChange1(e){
+    handleChange(e){
         
-        this.setState({username:e.target.value});
+        this.setState({[e.target.name]:e.target.value});
         }
-    handleChange2(e){
-        
-        this.setState({email:e.target.value});
-        }
-    handleChange3(e){
-        
-        this.setState({pwd:e.target.value});
-        }
+    
     handleSubmit(e){
         e.preventDefault();
-        alert(`You typed: ${this.state.username} \n ${this.state.email} \n ${this.state.pwd}`)
+        alert("You typed: \n" + this.state.username + "\n" + this.state.email + "\n" + this.state.pwd );
         
         
     }
@@ -36,24 +25,30 @@ class ContactForm extends Component{
         <h2>Contact form</h2>
         <form onSubmit={this.handleSubmit}>
             <label htmlFor="usrname" >Name</label>
-            <input type="text" id="usrname"
+            <input type="text" 
+            id="usrname"
+            name="username"
              value={this.state.username}
-              onChange={this.handleChange1}>
+              onChange={this.handleChange}>
                 </input>
                  {this.state.username}
                 <br></br>
 
                 <label htmlFor="emailid" >Email</label>
-            <input type="email" id="emailid"
+            <input type="email"
+             id="emailid"
+             name="email"
              value={this.state.email}
-              onChange={this.handleChange2}>
+              onChange={this.handleChange}>
                 </input> {this.state.email}
                 <br></br>
 
                 <label htmlFor="password" >Password</label>
-            <input type="password" id="password"
+            <input type="password" 
+            id="password"
+            name="pwd"
              value={this.state.pwd}
-              onChange={this.handleChange3}>
+              onChange={this.handleChange}>
                 </input>
                 {this.state.pwd}
                 <br></br>
