@@ -1,0 +1,14 @@
+.Cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li{
+        list-style: none;
+
+        button{
+            background-color: red;
+            display:block;
+        }
+    }
+}
