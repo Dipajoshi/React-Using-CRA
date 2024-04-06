@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ShoppingCart from "./ShoppingCart";
+import ProductList from "./ProductList";
 class App extends Component{
   render(){
 
-    let items=["iphone","laptop","mobile","earphone","watch"];
+    
 
     return(<div>
-      <ShoppingCart listitems={items}/>
+      <ProductList items={["JBL Earphone", "Samgsung Mobile", "Dell Laptop", "Iphone Charger"]}/>
     </div>);
   }
 }
